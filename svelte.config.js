@@ -15,6 +15,9 @@ const config = {
 		vite: {
 			optimizeDeps: { include: ['@vanilla-extract/css'] },
 			plugins: [vanillaExtractPlugin()],
+			ssr:{
+				noExternal: ['@vanilla-extract/css', '@vanilla-extract/css/fileScope']
+			}
 		}
 	}
 };
